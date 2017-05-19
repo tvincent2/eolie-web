@@ -1,5 +1,5 @@
-baseurl: "/lollypop-web"
-version: 0.9.112
+baseurl: "/eolie-web"
+version: 0.2
 
 exclude: [README.md]
 collections:
