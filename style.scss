@@ -1,0 +1,473 @@
+---
+---
+@import "variable";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background: url('./images/background.jpg') fixed;
+	background-size: cover;
+	font-size: 14px;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+    overflow-x: hidden;
+}
+
+.navigation {
+	padding: 0;
+	margin: 0;
+    list-style: none;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+	li {
+		width: 200px;
+		div {
+			width: 200px;
+			color: #fff;
+			background: #FD759D;
+			padding: 1.5rem 0;
+			text-align: center;
+			font-weight: 600;
+			border-bottom: 2px solid #FD759D;
+		}
+		a {
+			display: block;
+			color: #5E5E5C;
+			text-decoration: none;
+			padding: 1rem 0;
+			text-align: center;
+			font-weight: 600;
+			bottom-top: 1px solid #fff;
+			border-bottom: 1px solid #FD759D;
+
+			&:hover {
+				background: #FD759D;
+				color: #fff;
+				transition-duration: .2s;
+			}
+		}
+	}
+}
+
+#nav-trigger {
+	display: none;
+}
+
+label[for="nav-trigger"] {
+	display: inline-block;
+    padding: 1rem  2rem 1rem 1rem;
+    transition: left 0.2s;
+    border-radius: 0 20px 20px 0;
+	background: #fff;
+    position: fixed;
+    top: 10px;;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    transition: left 0.2s;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+    svg path {
+		fill: #FD759D;
+	}
+}
+.nav-trigger:checked + label {
+    left: 200px;
+    transition: left 0.2s;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+    left: 200px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.3);
+}
+
+.site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: left 0.2s;
+}
+
+header {
+	background: radial-gradient(rgba(255, 225, 232, .8), rgba(252,57,114, 1));
+	text-align: center;
+	padding: 1.5rem 0;
+
+	> a {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		padding: 1rem 2rem;
+		display: inline-block;
+		background-color: #fff;
+		color: $main-color;
+		text-decoration: none;
+		border: 2px solid #fff;
+		font-family: sans-serif;
+		border-radius: 20px;
+		z-index: 2;
+		transition-duration: .25s;
+		font-weight: bold;
+
+		svg {
+			display: inline-block;
+			margin-right: .5rem;
+			vertical-align: top;
+			fill: #FD3E75;
+			transition-duration: .25s;
+		}
+
+		&:hover {
+			background-color: rgba(0,0,0,0);
+			color: #fff;
+			border: 2px solid #fff;
+
+			svg {
+				fill: #fff;
+			}
+		}
+	}
+	h1 {
+		position: relative;
+    	margin: 4rem auto 4.5rem;
+		top: -2rem;
+		color: #fff;
+		font-weight: 100;
+		font-family: 'Yantramanav', sans-serif;
+		font-size: 4.5rem;
+		z-index: 1;
+
+		@media screen and (max-width: 450px) {
+			top: 2rem;
+		}
+	}
+	p {
+		position: relative;
+		top: -5rem;
+		color: #fff;
+		font-family: sans-serif;
+		font-size: 2rem;
+		font-weight: bold;
+		z-index: 1;
+
+		@media screen and (max-width: 450px) {
+			top: 0;
+		}
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+
+		&.screenshot {
+			position: relative;
+			margin-top: -50px;
+			z-index: 1;
+			box-shadow: 0px 0px 20px #343434;
+
+			@media screen and (max-width: 1045px) {
+				width: 80%;
+				height: auto;
+			}
+
+			@media screen and (max-width: 450px) {
+				margin-top: 25px;
+				width: 100%;
+			}
+		}
+		&.candy {
+			position: relative;
+			top: -400px;
+			z-index: 3;
+
+			@media screen and (max-width: 1045px) {
+				top: -250px;
+				height: 150px;
+				width: 150px;
+			}
+
+			@media screen and (max-width: 752px) {
+				top: -150px;
+			}
+
+			@media screen and (max-width: 450px) {
+				top: -75px;
+				height: 100px;
+				width: 100px;
+			}
+		}
+	}
+}
+
+main {
+	flex: 1;
+	position: relative;
+	top: -500px;
+	padding: 5rem 0 4rem;
+	width: 100%;
+	background-color: #fff;
+	text-align: center;
+	z-index: 2;
+
+    @media screen and (max-width: 1045px) {
+		top: -350px;
+	}
+
+	@media screen and (max-width: 752px) {
+		top: -250px;
+	}
+
+	@media screen and (max-width: 450px) {
+		top: -150px;
+		padding: 2rem 2%;
+		width: 96%;
+	}
+
+	> .downloadBar {
+		display: block;
+		padding: 3rem 0 5rem;
+		margin: 0 auto;
+
+		@media screen and (max-width: 450px) {
+			padding-bottom: 1rem;
+		}
+
+		.box {
+			display: inline-block;
+			margin: 0 2rem;
+			width: 20rem;
+			vertical-align: top;
+			font-family: sans-serif;
+
+			@media screen and (max-width: 752px) {
+				width: 90%;
+			}
+
+			@media screen and (max-width: 450px) {
+				margin: 0;
+			}
+
+			.botton {
+				cursor: pointer;
+				width: 15rem;
+				margin-bottom: 1rem;
+				padding: .5rem 2rem;
+				display: inline-block;
+				font-size: 2rem;
+				color: #787878;
+				border: 2px solid #787878;
+				border-radius: 1.5rem;
+				text-decoration: none;
+				transition-duration: .25s;
+
+				@media screen and (max-width: 752px) {
+					margin-right: 2rem;
+					display: inline-block;
+					width: 10rem;
+					padding-right: 4rem;
+				}
+
+				@media screen and (max-width: 450px) {
+					margin-right: 0;
+					padding-right: 0;
+					margin: 0 auto 2rem;
+					display: block;
+				}
+
+				&:hover {
+					background-color: #787878;
+					color: #fff;
+				}
+			}
+
+			.green {
+				background-color: $green;
+				border: 2px solid $green;
+				color: #fff;
+
+				&:hover {
+					background-color: #fff;
+					color: $green;
+				}
+			}
+		}
+	}
+	#toggle-package {
+		display: none;
+	}
+	#toggle-package:checked ~ #package {
+    	border-top: 3px solid #aaa;
+		padding: 3rem 0;
+    	height: auto;
+    	transition-duration: .2s;
+	}
+    ul#package {
+		overflow: hidden;
+		height: 0;
+		padding: 0;
+    	background: #ccc;
+    	transition-duration: .2s;
+    	box-shadow: inset 0 0 10px #aaa;
+		margin: 0 auto;
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            width: 23%;
+            min-height: 3rem;
+            margin: 1rem 2rem;
+
+
+			@media screen and (max-width: 752px) {
+				width: 40%;
+			}
+
+			@media screen and (max-width: 450px) {
+				width: 90%
+			}
+			&:last-child {
+				@media screen and (max-width: 752px) {
+					display: none;
+				}
+			}
+
+			> a {
+				display: block;
+                padding: 1.5rem;
+				box-shadow: 1px 1px 5px #888;
+                text-decoration: none;
+                margin: auto;
+                text-align: center;
+                border-radius: 1.5rem;
+				@media screen and (max-width: 450px) {
+					padding: 2rem .5rem 1rem;
+				}
+
+				.icon {
+					margin-right: .25rem;
+				}
+				.title {
+					display: inline-block;
+					vertical-align: center;
+                    font-size: 1.7rem;
+                    font-weight: 600;
+                    color: white;
+                    font-family: sans-serif;
+				}
+			}
+		}
+	}
+
+	ul.feature {
+		padding: 2rem 5% 0;
+		margin: 0 auto;
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+			vertical-align: top;
+			text-align: left;
+			width: 25%;
+			margin: 0 1rem;
+			min-height: 150px;
+
+			@media screen and (max-width: 752px) {
+				width: 40%;
+			}
+
+			@media screen and (max-width: 450px) {
+				width: 90%
+			}
+			&:last-child {
+				@media screen and (max-width: 752px) {
+					display: none;
+				}
+			}
+
+			> a {
+				display: inline-block;
+				padding: 2rem;
+				color: #787878;
+				text-decoration: none;
+
+				@media screen and (max-width: 450px) {
+					padding: 2rem .5rem 1rem;
+				}
+
+				.icon {
+					margin-right: .25rem;
+				}
+				.title {
+					display: inline-block;
+					color: $footer-bgcolor;
+					vertical-align: top;
+					font-weight: 500;
+					font-family:  sans-serif;
+				}
+				.description {
+					font-family:  sans-serif;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	margin-top: -500px;
+	padding: 1rem 5rem;
+	height: 1.5rem;
+	background-color: $footer-bgcolor;
+	color: #fff;
+	font-family: sans-serif;
+
+	@media screen and (max-width: 1045px) {
+		margin-top: -350px;
+	}
+
+	@media screen and (max-width: 752px) {
+		margin-top: -250px;
+	}
+
+	@media screen and (max-width: 535px) {
+		height: 3rem;
+	}
+
+	@media screen and (max-width: 450px) {
+		margin-top: -150px;
+		padding: 1rem;
+	}
+
+	div {
+		line-height: 1.5rem;
+
+		&.maintainer {
+			float: left;
+			@media screen and (max-width: 535px) {
+				float: right;
+			}
+		}
+
+		&.publish {
+			float: right;
+
+		}
+
+		a {
+			color: #fff
+		}
+	}
+}
