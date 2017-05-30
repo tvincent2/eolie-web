@@ -299,6 +299,17 @@ main {
 					color: $green;
 				}
 			}
+			.blue {
+                                background-color: $blue;
+                                border: 2px solid $blue;
+                                color: #fff;
+
+                                &:hover {
+                                        background-color: #fff;
+                                        color: $blue;
+                                }
+                        }
+
 		}
 	}
 	#toggle-package {
