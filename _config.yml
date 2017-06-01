@@ -4,10 +4,4 @@ version: 0.2
 exclude: [README.md]
 collections:
     features:
-        output: false
-    features-fr:
-        output: false
-    features-nl:
-        output: false
-    features-tw:
-        output: false
+        output: true
