@@ -4,4 +4,4 @@ version: 0.2
 exclude: [README.md]
 collections:
     features:
-        output: true
+        output: false
