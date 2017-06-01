@@ -1,5 +1,5 @@
 ---
-icon: "images/fullscreen.png"
+icon: "images/view-fullscreen-symbolic.svg"
 title: Fullscreen view
 ---
-Visual access from your couch
+Fullscreen content access
