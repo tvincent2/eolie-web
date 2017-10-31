@@ -27,12 +27,27 @@ title: homepage
 		<main>
 			<div class="downloadBar">
 				<div class="box">
-					<a class="botton green" href="https://github.com/gnumdk/eolie/releases">Source code</a>
+					<a class="botton green" href="https://github.com/gnumdk/lollypop/releases">Source code</a>
 				</div>
 				<div class="box">
-					<a class="botton" href="https://flathub.org/repo/appstream/org.gnome.Eolie.flatpakref">Download</a>
+					<label for="toggle-package" class="botton">Download</label>
 				</div>
 			</div>
+
+			<input type="checkbox" id="toggle-package" name="toggle-package">
+			{% if site.packages != empty %}
+			<ul id="package">
+				{% for package in site.data.packages %}
+					<li>
+						<a href="{{ package.url }}" style="background:{{ package.bg-color }};">
+							<div class="title">
+								{{ package.name }}
+							</div>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
 			<ul class="feature">
 				{% for feature in site.features %}
 					<li>
